@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import 'var.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    color:rgba(0, 0, 0, .87)
+}
+
+html {
+    font-family: "Quicksand" , "sans-serif";
+}
+
+a{  
+    text-decoration: none;
+    color:black
+}
+
+body{
+    margin:0;
+}
+
+
+html, body { height: 100%; }
+
+.font-icon{
+    width: 16px !important ;
+    height: 16px !important ;
+    font-size: 16px;
+}

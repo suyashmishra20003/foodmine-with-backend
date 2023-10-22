@@ -1,0 +1,37 @@
+<div class="search-container">
+    <div class="search-bar">
+        <input class="input-box" type="text">
+        <button mat-flat-button color="warn">Warn</button>
+    </div>
+</div>
+<button mat-button color="warn">Warn</button>
+
+<ul >
+
+    <li *ngFor="let item of foods">
+        <a routerLink="/food/{{item.id}}">
+            <img [src]="item.imageUrl" [alt]="item.name">
+            <div class="content">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <span class=" {{item.favorite ? 'favorite' : 'notFavorite' }}" >
+                    <mat-icon class="font-icon">favorite</mat-icon>
+                </span>
+            </div>
+            <div class="product-item-footer">
+                <div class="origins">
+                    <span *ngFor="let origin of item.origins" > {{origin}} </span>
+                </div>
+                <div class="cook-time"> 
+                    <mat-icon class="font-icon">schedule</mat-icon>
+                    {{item.cookTime}}
+                </div>
+            </div>
+            <div class="price">
+                {{item.price | currency}}
+            </div>
+        </a>  
+    </li>
+
+</ul>
